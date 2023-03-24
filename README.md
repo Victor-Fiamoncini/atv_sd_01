@@ -1,4 +1,4 @@
-# ATV SD 01
+# Atividade Sistemas Distribuídos 01
 
 ## Requirements
 
