@@ -12,7 +12,7 @@ def benchmark(function_to_track: Callable) -> Callable:
         func_return = function_to_track(*args, **kwargs)
         end = time.time() - start
 
-        print(f'Executing {function_to_track.__name__} function took {end} seconds')
+        print(f'Executing {function_to_track.__name__} function took {end:.2f} seconds')
 
         return func_return
 

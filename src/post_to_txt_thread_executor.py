@@ -17,7 +17,7 @@ class PostToTxtThreadExecutor:
 
     MAX_THREADS: int = 4
 
-    def __init__(self, file_handler: FileHandler, posts: List[Post]) -> Generator[str, str, str]:
+    def __init__(self, file_handler: FileHandler, posts: List[Post]) -> None:
         self.file_handler = file_handler
         self.posts = posts
 
