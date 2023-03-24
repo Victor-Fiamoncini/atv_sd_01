@@ -3,6 +3,7 @@
 import os
 import json
 
+from decorators import benchmark
 from file_handler import FileHandler
 from mappers import map_post_dict_to_post_dto
 from post_to_txt_thread_executor import PostToTxtThreadExecutor
@@ -23,6 +24,7 @@ def remove_all_txt_files_from_output() -> None:
 
         os.remove(path_to_file)
 
+@benchmark
 def main() -> None:
     ''' Main program start '''
 
@@ -36,7 +38,7 @@ def main() -> None:
         post_to_txt_thread_executor = PostToTxtThreadExecutor(file_handler, list(mapped_posts))
 
         for generated_filename in post_to_txt_thread_executor.execute_concurrently():
-            print(f'FILE GENERATED: {generated_filename}')
+            print(f'File generated: {generated_filename}')
 
 if __name__ == '__main__':
     main()
