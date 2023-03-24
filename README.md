@@ -26,18 +26,6 @@ Install project dependencies
 pip install -r requirements.txt
 ```
 
-Create a new .env file
-
-```
-cp .env.example .env
-```
-
-Run Flask in development mode
-
-```
-flask run
-```
-
 ----------
 Released in 2023. This project is under the MIT license.
 
