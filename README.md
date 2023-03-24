@@ -3,7 +3,7 @@
 ## Requirements
 
 - python3 == 3.8.10
-- pip == 22.3.1
+- pip == 20.0.2
 - virtualenv == 20.17.1
 
 ## Project setup (development env) 🛠
