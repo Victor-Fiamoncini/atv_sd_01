@@ -8,32 +8,13 @@ JSON obtido em: <https://jsonplaceholder.typicode.com/posts>
 
 - python3 == 3.8.10
 - pip == 20.0.2
-- virtualenv == 20.17.1
 
 ## Project setup (development env) 🛠
 
-Create a new venv folder
+Init main code (in Unix bash)
 
 ```bash
-virtualenv venv
-```
-
-Activate venv
-
-```bash
-source venv/bin/activate
-```
-
-Install project dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Init
-
-```bash
-init.sh
+./init.sh
 ```
 
 ----------
