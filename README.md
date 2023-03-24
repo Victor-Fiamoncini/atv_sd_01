@@ -1,5 +1,7 @@
 # Atividade Sistemas Distribuídos 01
 
+Executa threads para converter arquivos JSON para TXT concorrentemente.
+
 ## Requirements
 
 - python3 == 3.8.10
