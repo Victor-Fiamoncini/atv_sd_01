@@ -2,6 +2,8 @@
 
 Executa threads para converter arquivos JSON para TXT concorrentemente.
 
+JSON obtido em: <https://jsonplaceholder.typicode.com/posts>
+
 ## Requirements
 
 - python3 == 3.8.10
@@ -12,20 +14,26 @@ Executa threads para converter arquivos JSON para TXT concorrentemente.
 
 Create a new venv folder
 
-```
+```bash
 virtualenv venv
 ```
 
 Activate venv
 
-```
+```bash
 source venv/bin/activate
 ```
 
 Install project dependencies
 
-```
+```bash
 pip install -r requirements.txt
+```
+
+Init
+
+```bash
+init.sh
 ```
 
 ----------
