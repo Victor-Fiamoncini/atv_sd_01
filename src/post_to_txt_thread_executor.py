@@ -22,7 +22,7 @@ class PostToTxtThreadExecutor:
         self.posts = posts
 
     def execute_concurrently(self) -> Generator:
-        ''' Execute the following task concurrently '''
+        ''' Executes the following tasks (save_json_as_txt) concurrently '''
 
         with ThreadPoolExecutor(max_workers=self.MAX_THREADS) as executor:
             save_file_json_to_txt_futures = [

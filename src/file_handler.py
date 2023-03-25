@@ -1,7 +1,10 @@
 ''' This module defines the FileHandler class '''
 
-import os
+from os.path import join
+
 import json
+
+from paths import Paths
 
 class FileHandler:
     ''' FileHandler class '''
@@ -9,9 +12,10 @@ class FileHandler:
     def save_json_as_txt(self, json_input: dict) -> str:
         ''' Store the JSON input as .txt file '''
 
-        txt_file_path = f"{os.path.dirname(__file__)}/../output/post-{json_input.get('id')}.txt"
+        new_txt_filename = f"post-{json_input.get('id')}.txt"
+        txt_filepath = join(Paths.OUTPUT_DIRPATH, new_txt_filename)
 
-        with open(txt_file_path, 'w', encoding='utf-8') as txt_file:
-            json.dump(json_input, txt_file, ensure_ascii=False, indent=2)
+        with open(txt_filepath, 'w', encoding='utf-8') as txt_file:
+            json.dump(json_input, txt_file, indent=2)
 
-            return txt_file_path
+            return txt_filepath
