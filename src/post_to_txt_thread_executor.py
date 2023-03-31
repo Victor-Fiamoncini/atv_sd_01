@@ -25,12 +25,16 @@ class PostToTxtThreadExecutor:
         ''' Executes the following tasks (save_json_as_txt) concurrently '''
 
         with ThreadPoolExecutor(max_workers=self.MAX_THREADS) as executor:
-            save_file_json_to_txt_futures = [
-                executor.submit(self.file_handler.save_json_as_txt, map_post_dto_to_post_dict(post))
+            save_post_to_txt_futures = [
+                executor.submit(
+                    self.file_handler.save_json_as_txt,
+                    f'post-{post.id}.txt',
+                    map_post_dto_to_post_dict(post)
+                )
                 for post in self.posts
             ]
 
-            for future in futures.as_completed(save_file_json_to_txt_futures):
+            for future in futures.as_completed(save_post_to_txt_futures):
                 exception = future.exception()
 
                 yield exception if exception else future.result()
